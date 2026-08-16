@@ -6,6 +6,3 @@ dependencies:
   - fastapi
   - uvicorn
   - requests
-  - pip
-  - pip:
-    - "uvicorn[standard]"
