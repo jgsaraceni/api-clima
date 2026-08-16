@@ -4,9 +4,12 @@ WORKDIR /app
 
 COPY environment.yml .
 
-RUN conda env create -f environment.yml
+RUN conda env create -f environment.yml && conda clean -afy
 
 COPY app ./app
+
+# Ensure conda env binaries are on PATH
+ENV PATH /opt/conda/envs/weather-api/bin:$PATH
 
 EXPOSE 8000
 

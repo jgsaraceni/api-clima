@@ -1,0 +1,11 @@
+name: weather-api
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - fastapi
+  - uvicorn
+  - requests
+  - pip
+  - pip:
+    - "uvicorn[standard]"
