@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API de Clima</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f7fb;
+        color: #1f2937;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 24px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      h1 {
+        color: #0f172a;
+      }
+
+      code, pre {
+        background: #eef2ff;
+        border-radius: 8px;
+        padding: 8px 12px;
+        font-family: "Courier New", monospace;
+      }
+
+      .card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 18px;
+        margin-top: 20px;
+      }
+
+      a {
+        color: #2563eb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>API de clima</h1>
+      <p>
+        Esta API retorna a temperatura atual de uma cidade informada pelo usuário.
+      </p>
+
+      <div class="card">
+        <h2>Como usar</h2>
+        <p>Use a rota:</p>
+        <pre>/temperatura-cidade?nome_cidade=Curitiba</pre>
+
+        <p>Exemplo completo:</p>
+        <pre>http://127.0.0.1:1234/temperatura-cidade?nome_cidade=Curitiba</pre>
+
+        <p>
+          A resposta será a temperatura atual em graus Celsius, por exemplo:
+        </p>
+        <pre>22.1</pre>
+      </div>
+
+      <div class="card">
+        <h2>Exemplo prático</h2>
+        <p>
+          Se você quiser consultar a temperatura de São Paulo, faça a seguinte chamada:
+        </p>
+        <pre>http://127.0.0.1:1234/temperatura-cidade?nome_cidade=Sao%20Paulo</pre>
+      </div>
+
+      <div class="card">
+        <h2>Teste interativo</h2>
+        <p>
+          Para testar a API em uma interface mais amigável, acesse o <a href="/docs" target="_blank">/docs</a>.
+          Lá você pode enviar requisições diretamente pela documentação interativa do FastAPI.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
